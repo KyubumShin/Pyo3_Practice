@@ -1,0 +1,17 @@
+[package]
+name = "pyo3_numpy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pyo3_numpy"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.18.1"
+numpy = "0.18"
+opencv = "0.78.0"
+anyhow = "1.0.70"
+ndarray = "0.15.6"
+half = '2.2.1'
