@@ -1,2 +1,2 @@
-# Cython_Practice
+# Rust_Practice
 Practice Pre-Postprocessing Data with Cython
