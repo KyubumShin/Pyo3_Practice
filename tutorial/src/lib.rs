@@ -2,13 +2,17 @@ use pyo3::prelude::*;
 
 /// Formats the sum of two numbers as string.
 #[pyfunction]
-fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
-    Ok((a + b).to_string())
+fn sum_vec(i: u64) -> PyResult<u64> {
+    let mut ret:u64 = 0;
+    for i in 0..i {
+        ret += i
+    };
+    Ok(ret)
 }
 
 /// A Python module implemented in Rust.
 #[pymodule]
 fn tutorial(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
+    m.add_function(wrap_pyfunction!(sum_vec, m)?)?;
     Ok(())
 }
